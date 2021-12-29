@@ -1,0 +1,7 @@
+mode=drun
+width=25%
+lines=5
+#sort_order=alphabetical
+insensitive=true
+gtk_dark=true
+#allow_images=true

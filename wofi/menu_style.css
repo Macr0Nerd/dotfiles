@@ -1,0 +1,14 @@
+window {
+	opacity: 0.8;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+#input {
+	border: none;
+	background: none;
+}
+
+#entry:selected {
+	background-color: #da9154;
+}
