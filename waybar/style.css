@@ -57,6 +57,8 @@
     font-size: 13px;
 }
 
+
+
 /* Each module */
 #battery,
 #clock,
@@ -147,6 +149,10 @@
 
 #network.disconnected {
     color: orange;
+}
+
+#network.disable {
+    color: red;
 }
 
 #pulseaudio {

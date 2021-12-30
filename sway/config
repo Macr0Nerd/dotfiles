@@ -216,6 +216,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #
+# Notifications:
+#
+exec mako
+
+#
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
