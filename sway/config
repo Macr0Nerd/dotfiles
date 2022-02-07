@@ -74,6 +74,11 @@ input type:touchpad {
     natural_scroll enabled
 }
 
+input type:mouse {
+    accel_profile "flat"
+    pointer_accel 0.5
+}
+
 ### Key bindings
 #
 # Basics:
@@ -290,7 +295,7 @@ client.background       $base07
 #
 for_window [app_id="thunar"] floating enable
 for_window [app_id="azote"] floating enable
-for_window [app_id="zoom"] floating enable
+for_window [app_id="zoom"] floating enable; xwayland force
 
 #
 # Random settings:
@@ -299,6 +304,8 @@ default_orientation auto
 workspace_layout default
 xwayland enable
 focus_follows_mouse no
+exec autotiling
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Don't touch
 include /etc/sway/config.d/*

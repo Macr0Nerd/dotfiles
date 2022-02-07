@@ -135,13 +135,13 @@
         "format-bluetooth": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
-            "headphones": "",
-            "handsfree": "",
+            "headphones": "",
+            "handsfree": "",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", ""]
         },
 	"on-scroll-down": "pamixer -i 2",
 	"on-scroll-up": "pamixer -d 2",
