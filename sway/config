@@ -39,17 +39,20 @@ exec ~/.azotebg
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+exec_always pkill kanshi; exec kanshi
+
 ### Idle configuration
 #
 # Example configuration:
 #
+set $lockscreen "/home/erev/Pictures/Wallpapers/sunset_lockscreen.jpg"
 exec swayidle -w \
-         timeout 300 'swaylock -f -u -i "/home/erev/Pictures/Wallpapers/sunset_lockscreen.jpg"' \
+         timeout 300 'swaylock -f -u -i $lockscreen' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          timeout 600 'systemctl hybrid-sleep' \
          before-sleep 'playerctl pause' \
-         before-sleep 'swaylock -f -i "/home/erev/Pictures/Wallpapers/lockscreen.jpg"' \
-         lock 'swaylock -f -i "/home/erev/Pictures/Wallpapers/lockscreen.jpg"'
+         before-sleep 'swaylock -f -u -i $lockscreen' \
+         lock 'swaylock -f -u -i $lockscreen'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -263,7 +266,7 @@ bindsym --locked XF86MonBrightnessDown exec light -U 5
 #
 # Screenshot:
 #
-bindsym XF86Favorites exec grimshot save
+bindsym XF86Favorites exec grim -g "$(slurp)" screenshot.png
 
 #
 # Lock screen:
@@ -274,7 +277,7 @@ bindsym Ctrl+Alt+l exec swaylock -f -u -i "/home/erev/Pictures/Wallpapers/sunset
 #
 # Ricing:
 #
-exec import-gsettings
+# exec import-gsettings
 default_border pixel 2
 smart_borders on
 gaps outer 10
