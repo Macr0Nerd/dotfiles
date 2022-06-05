@@ -119,11 +119,12 @@
         "disable-scroll": true,
         "format": "{icon}",
         "format-icons": {
-            "1": "", // Icon: terminal
-            "2": "", // Icon: code
-            "3": "", // Icon: mail
+            "1": "", // Icon: keyboard
+            "2": "", // Icon: terminal
+            "3": "", // Icon: code
             "4": "", // Icon: spotify
             "5": "", // Icon: terminal
+            "6": "", // Icon: envelope
             "urgent": "",
             "focused": "",
             "default": ""
