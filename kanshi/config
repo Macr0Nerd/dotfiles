@@ -7,11 +7,6 @@ profile vertless {
     output eDP-1 enable position 0,1440 mode 1920x1080@60Hz
 }
 
-profile docked {
-    output "Unknown ROG PG279QM #GTIYMxgwABNZ" enable position 0,0 mode 2560x1440@144Hz transform 90
-    output "Unknown ASUS XG32V 0x0000E9E8" enable position 1440,40 mode 2560x1440@144Hz
-}
-
 profile workstation {
     output "Unknown ROG PG279QM #GTIYMxgwABNZ" enable position 0,0 mode 2560x1440@144Hz transform 90
     output "Unknown ASUS XG32V 0x0000E9E8" enable position 1440,40 mode 2560x1440@144Hz
