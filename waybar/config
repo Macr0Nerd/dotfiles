@@ -64,9 +64,9 @@
 
     "clock": {
         "interval": 1,
-        "format": "{:%a, %b %d %H:%M:%S}",
+        "format": "{:%a, %b %d %T}",
 	"tooltip": true,
-        "tooltip-format": "{:%F-T-%H-%M-%S}"
+        "tooltip-format": "{:%F-T-%T}"
     },
 
     "cpu": {
@@ -101,7 +101,7 @@
         "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}",
-	"on-click": "~/Code/wofi-wifi-menu/wofi-wifi-menu.sh"
+	"on-click": "iwgtk"
     },
 
     "sway/mode": {

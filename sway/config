@@ -39,7 +39,9 @@ exec ~/.azotebg
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-exec_always "pkill kanshi; kanshi"
+#exec_always "pkill kanshi; kanshi"
+include ~/.config/sway/outputs
+include ~/.config/sway/workspaces
 
 ### Idle configuration
 #
@@ -73,12 +75,20 @@ exec swayidle -w \
 # Read `man 5 sway-input` for more information about this section.
 
 input type:touchpad {
+    accel_profile "flat"
     tap enabled
     natural_scroll enabled
+    dwt disabled
 }
 
 input type:mouse {
     accel_profile "flat"
+    pointer_accel 0.15
+}
+
+input "TPPS/2 Elan TrackPoint" {
+    accel_profile "flat"
+    natural_scroll enabled
     pointer_accel 0.5
 }
 
@@ -271,7 +281,8 @@ bindsym --locked XF86MonBrightnessDown exec light -T 0.72
 #
 # Screenshot:
 #
-bindsym XF86Favorites exec grim -g "$(slurp)" screenshot.png
+bindsym XF86Favorites exec grim -g "$(slurp)" ~/screenshot.png
+bindsym Print exec grim -g "$(slurp)"
 
 #
 # Lock screen:
