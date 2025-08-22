@@ -76,6 +76,7 @@ plugins=(
 	colorize
 	zsh-autosuggestions
     tmux
+    virtualenv
 )
 
 ZSH_TMUX_AUTOCONNECT=true
