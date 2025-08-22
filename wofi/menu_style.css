@@ -1,14 +1,30 @@
-window {
-	opacity: 0.8;
-	border-radius: 5px;
-	margin: 5px;
+#window {
+    background: none;
+    color: #60ffff;
+}
+
+#outer-box {
+	background-color: rgba(22, 53, 64, 0.6);
+	border-radius: 0.5rem;
+    border-color: #60ffff;
+    border-style: solid;
+    border-width: 0.15rem;
 }
 
 #input {
-	border: none;
-	background: none;
+    background: none;
+    border:none;
 }
 
 #entry:selected {
-	background-color: #da9154;
+    color: #163540;
+	background-color: #60ffff;
+}
+
+#text {
+    color: #60ffff;
+}
+
+#text:selected {
+    color: #163540;
 }
