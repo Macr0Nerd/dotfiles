@@ -138,8 +138,6 @@ alias sscp='grim -g "$(slurp)" - | wl-copy'
 alias update-mirrors="sudo reflector --save /etc/pacman.d/mirrorlist --protocol https --latest 5 --sort age"
 
 alias irssi="proxychains4 irssi"
-alias firewall-config="xhost si:localuser:root; sudo firewall-config; xhost -si:localuser:root"
-#alias gparted="xhost si:localuser:root; sudo gparted; xhost -si:localuser:root"
 
 alias grub-remake="sudo grub-install --target=x86_64-efi --efi-directory=/efi bootloader-id=GRUB; sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
