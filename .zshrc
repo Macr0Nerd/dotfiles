@@ -105,7 +105,7 @@ export LANG=en_US.UTF-8
 
 export OPENER='xdg-open'
 export EDITOR='vim'
-export PAGER='moar'
+export PAGER='less'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -151,13 +151,7 @@ alias kbd-backlight-off="sudo light -s sysfs/leds/tpacpi::kbd_backlight -S 0"
 
 alias pipes="pipes.sh -t 3 -p 5 -R -K -f 144"
 
-if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
-fi
-
 export GPG_TTY=$(tty)
 
-neofetch
-rem -hb1
+fastfetch
 export QT_STYLE_OVERRIDE=Adwaita-Dark
